@@ -1,51 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Contact Us</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - DermaGlow Organic Skincare</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="myscript.js"></script>
+    <script src="https://www.bing.com/maps?pglt=43&q=Northridgemall+bloemfontein+shop+35&cvid=0d54d01bfb0f45e389b9d7c8f400fa73&FORM=ANSPA1&PC=U531" async defer></script>
 </head>
 <body>
-    <nav>
-        <!--This is my navigation bar-->
-        <div class="topnav">
-            <a class="active"
-            href="home.html">Home</a>
-            <a href="aboutus.html">About Us</a>
-            <a href="products.html">Products catalogue</a>
-            <a href="contactus.html">Contact Us</a>
-            <a href="checkout.html">Checkout</a>
-            
-        </div>
+    <nav class="topnav">
+        <a class="active" href="home.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="contactus.html">Contact Us</a>
+        <a href="checkout.html">Checkout</a>
+    </nav>
 
     <main>
-        <h1>Contact Us</h1>
-        <form id="contact-form" novalidate>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required placeholder="Your full name" />
+        <section class="contact-section">
+            <h1>Get In Touch</h1>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required placeholder="First and last name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="your@email.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" required rows="5" placeholder="How can we help you?"></textarea>
+                </div>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required placeholder="you@example.com" />
-
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required placeholder="Write your message here..." rows="5"></textarea>
-
-            <button type="submit">Send message</button>
-        </form>
-        <div class="success-message" role="alert" aria-live="assertive" style="display:none;">
-            Thank you! Your message has been sent.
-        </div>
+        <section class="map-section">
+            <div id="storeMap"></div>
+            <img src="images/Map.PNG" alt="DermaGlow Store Location at Northridge Mall" class="map-image" id="storeMap">
+            
+            <button class="directions-button" id="getDirections">
+                Get Directions
+            </button>
+            
+            <div class="store-info">
+                <h2>Store Information</h2>
+                
+                <div class="info-item">
+                    <div class="info-icon">📍</div>
+                    <div>Shop 35C, Northridge Mall, 20 Harry Smith Street, Bloemfontein, 9301</div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">🕒</div>
+                    <div>
+                        <strong>Opening Hours:</strong><br>
+                        Mon-Fri: 9:00 - 18:00<br>
+                        Sat: 9:00 - 15:00<br>
+                        Sun: 10:00 - 14:00
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">📞</div>
+                    <div><strong>Phone:</strong> +27 51 123 4567</div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">✉️</div>
+                    <div><strong>Email:</strong> info@dermaglow.co.za</div>
+                </div>
+            </div>
+        </section>
     </main>
-    <!--This is my footer-->
+
     <footer>
         <div class="footer-content">
-            <p>&copy; 2025 DermaGlow Organic Skincare. All rights reserved.</p>
-            
-               
-        
-</footer> 
+            <p>&copy; <span id="currentYear"></span> DermaGlow Organic Skincare. All rights reserved.</p>
+            <p>Created by Atlehang Setai</p>
+        </div>
+    </footer>
+
+    <script src="map.js"></script>
+    <script src="contact.js"></script>
 </body>
 </html>
-

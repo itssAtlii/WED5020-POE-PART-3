@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password | Derma Glow Skincare</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="My Main Javascript/forgot password.js"></script>
+   
+</head>
+<body>
+    <div class="password-container">
+    
+        
+        <h1>Forgot Password?</h1>
+        <p>Enter your email address and we'll send you a link to reset your password.</p>
+        
+        <div id="errorMessage" class="message error"></div>
+        <div id="successMessage" class="message success"></div>
+        
+        <form id="forgotPasswordForm">
+            <div class="form-group">
+                <div class="input-icon">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" placeholder="Your email address" required>
+                </div>
+            </div>
+            
+            <button type="submit" id="submitBtn">
+                <span id="btnText">Send Reset Link</span>
+                <span id="btnSpinner" style="display: none;">
+                    <i class="fas fa-spinner fa-spin"></i>
+                </span>
+            </button>
+        </form>
+        
+        <div class="back-to-login">
+            <a href="index.html"><i class="fas fa-arrow-left"></i> Back to login</a>
+        </div>
+    </div>
+
+</body>
+</html>
